@@ -1,7 +1,7 @@
 import ProductModel from "../models/product.model.js"
 
 
-
+// Create a new product
 export const createProduct = async (name, quantity) => {
     try {
         const product = await ProductModel.create({
@@ -14,7 +14,7 @@ export const createProduct = async (name, quantity) => {
     }
 }
 
-
+// Fetch app products from database
 export const getAllProducts = async () => {
     try {
         const products = await ProductModel.find({});
@@ -24,7 +24,7 @@ export const getAllProducts = async () => {
     }
 }
 
-
+// Get product by its id
 export const getProductById = async(id) => {
     try {
         const product = await ProductModel.findById(id);
@@ -34,6 +34,7 @@ export const getProductById = async(id) => {
     }
 }
 
+// Delete a product by its id
 export const deleteProductById = async(id) => {
     try {
         const product = await ProductModel.findById(id);
@@ -48,6 +49,7 @@ export const deleteProductById = async(id) => {
     }
 }
 
+// Update a product by its id
 export const updateProductById = async(id, num) =>{
     try {
         const product = await ProductModel.findById(id);

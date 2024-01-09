@@ -1,6 +1,7 @@
+// Importing the dependencies
 import mongoose from "mongoose";
 
-
+// Creating product schema
 const productSchema = new mongoose.Schema({
     name: {
         type: String,
@@ -13,5 +14,7 @@ const productSchema = new mongoose.Schema({
     }
 }, {timestamps: true});
 
+// Creating the product model
 const ProductModel = mongoose.model('Product', productSchema);
+// Exporting the product model
 export default ProductModel;

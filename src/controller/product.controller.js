@@ -1,7 +1,8 @@
+// Importing the required modules
 import { createProduct, deleteProductById, getAllProducts, getProductById, updateProductById } from "../repository/product.repository.js";
 
 
-
+// TO add product to database
 export const addProduct = async (req, res) => {
     try {
         const {name, quantity} = req.body;
@@ -18,7 +19,7 @@ export const addProduct = async (req, res) => {
     }
 }
 
-
+// Fetch all products
 export const getAll = async (req, res) => {
     try {
         const products = await getAllProducts();
@@ -34,6 +35,7 @@ export const getAll = async (req, res) => {
     }
 }
 
+// Get a single product
 export const getAProduct = async(req, res) => {
     try {
         const id = req.params.id;
@@ -50,6 +52,7 @@ export const getAProduct = async(req, res) => {
     }
 }
 
+// Delete a product
 export const deleteProduct = async (req, res) => {
     try {
         const id = req.params.id;
@@ -66,6 +69,7 @@ export const deleteProduct = async (req, res) => {
     }
 }
 
+// Update a product
 export const updateProduct = async (req, res) => {
     try {
         const id = req.params.id;
