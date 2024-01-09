@@ -28,3 +28,7 @@
     - Fetch a single product
     - Delete a product
     - Update the quantity of product
+
+## API Structure
+
+    - url/api/products
